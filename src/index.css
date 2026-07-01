@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-orange-primary: #ff5a24;
+  --color-orange-bright: #ff7a1a;
+  --color-yellow-accent: #ffb800;
+  --color-navy-deep: #0c1e5b;
+  --color-navy-mid: #1b3a8a;
+  --color-body-bg: #f4f5fa;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #ffffff;
+  background-color: var(--color-body-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -15,9 +22,9 @@ body {
   background: linear-gradient(
     135deg,
     #ffffff 0%,
-    #f4f4f5 20%,
+    #f4f5fa 20%,
     #ffffff 45%,
-    #f8fafc 70%,
+    #fcfcfd 70%,
     #ffffff 100%
   );
   background-size: 300% 300%;
@@ -32,8 +39,8 @@ body {
 /* Grid Background */
 .grid-bg {
   background-image: 
-    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(12,30,91,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(12,30,91,0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -72,7 +79,7 @@ body {
 
 /* Text Shimmers */
 .text-shine-vertical {
-  background: linear-gradient(90deg, #111827 0%, #111827 40%, #2563eb 50%, #111827 60%, #111827 100%);
+  background: linear-gradient(90deg, #0c1e5b 0%, #0c1e5b 40%, #ff5a24 50%, #0c1e5b 60%, #0c1e5b 100%);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -85,7 +92,7 @@ body {
 }
 
 .text-shine-horizontal {
-  background: linear-gradient(90deg, #111827 0%, #111827 40%, #7c3aed 50%, #111827 60%, #111827 100%);
+  background: linear-gradient(90deg, #0c1e5b 0%, #0c1e5b 40%, #ffb800 50%, #0c1e5b 60%, #0c1e5b 100%);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;

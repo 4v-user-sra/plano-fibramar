@@ -13,7 +13,7 @@ export default function App() {
   const [view, setView] = useState<ViewState>('chart');
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-white">
+    <div className="relative w-full h-screen overflow-hidden bg-body-bg">
       {/* Background grid and metallic effect */}
       <div className="absolute inset-0 metallic-bg" />
       <div className="absolute inset-0 grid-bg opacity-60" />
