@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Metallic Background */
+.metallic-bg {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f4f4f5 20%,
+    #ffffff 45%,
+    #f8fafc 70%,
+    #ffffff 100%
+  );
+  background-size: 300% 300%;
+  animation: shimmer-bg 12s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer-bg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Grid Background */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Dashed Line Animation */
+.dashed-line {
+  stroke-dasharray: 12 12;
+  animation: dash-move 30s linear infinite;
+}
+
+@keyframes dash-move {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Hover Shine on Zones */
+.zone-shine {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, transparent 60%);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.group:hover .zone-shine {
+  opacity: 1;
+  animation: pulse-shine 3s infinite alternate;
+}
+
+@keyframes pulse-shine {
+  0% { transform: scale(1) translate(-5%, -5%); opacity: 0.5; }
+  50% { transform: scale(1.1) translate(0, 0); opacity: 0.8; }
+  100% { transform: scale(1) translate(5%, 5%); opacity: 0.5; }
+}
+
+/* Text Shimmers */
+.text-shine-vertical {
+  background: linear-gradient(90deg, #111827 0%, #111827 40%, #2563eb 50%, #111827 60%, #111827 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.3s;
+}
+
+.group:hover .text-shine-vertical {
+  animation: text-shimmer 2.5s infinite linear;
+}
+
+.text-shine-horizontal {
+  background: linear-gradient(90deg, #111827 0%, #111827 40%, #7c3aed 50%, #111827 60%, #111827 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.3s;
+}
+
+.group:hover .text-shine-horizontal {
+  animation: text-shimmer 2.5s infinite linear;
+}
+
+@keyframes text-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Bullet Items */
+.bullet-item {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.group:hover .bullet-item {
+  transform: translateX(12px);
+}
+
+.group:hover .bullet-item:nth-child(1) { transition-delay: 0.05s; }
+.group:hover .bullet-item:nth-child(2) { transition-delay: 0.1s; }
+.group:hover .bullet-item:nth-child(3) { transition-delay: 0.15s; }
+
+.bullet-item-right {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.group:hover .bullet-item-right {
+  transform: translateX(-12px);
+}
+
+.group:hover .bullet-item-right:nth-child(1) { transition-delay: 0.05s; }
+.group:hover .bullet-item-right:nth-child(2) { transition-delay: 0.1s; }
+.group:hover .bullet-item-right:nth-child(3) { transition-delay: 0.15s; }

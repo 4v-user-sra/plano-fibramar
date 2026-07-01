@@ -1,0 +1,6 @@
+{
+  "name": "plano-fibramar",
+  "description": "Dashboard for scaling plans for Fibramar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
