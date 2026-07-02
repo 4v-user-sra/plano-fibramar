@@ -34,30 +34,30 @@ export const verticalData: ViewContentData = {
     { 
       title: "Prioridade 1", 
       value: "Escalar Maricá e Saquarema", 
-      detail: "Maiores volumes observados. Aumentar orçamento de mídia em 20% em Maricá e na vice-líder Saquarema/Unamar (Google e Meta) e acompanhar o resultado. Não testar novas ofertas neste momento.", 
+      detail: "Maiores volumes de conversão. Remanejar 20% da verba das regiões ruins para cá (sem injetar orçamento extra global). Não testar novas ofertas neste momento.", 
       iconType: "trending-up" 
     },
     { 
       title: "Alerta Crítico", 
-      value: "Monitorar CPL", 
-      detail: "Se o CPL subir após o incremento, reduzir a verba em 20% (mantendo a escala base) para estabilizar a performance.", 
+      value: "Monitoramento de CAC", 
+      detail: "Se o CAC/CPL subir, revertemos a verba ao normal, analisamos as causas (sazonalidade, leilão, concorrentes) e reportamos os motivos antes de qualquer nova escala.", 
       iconType: "alert-circle" 
     },
     { 
       title: "Apoio Estratégico", 
       value: "Rotação Criativa", 
-      detail: "Sustentar a performance rotacionando formatos (imagem ↔ vídeo curto) e criativos campeões (foco em 'Dor + Benefício') para combater fadiga e estabilizar o CTR.", 
+      detail: "Manteremos a performance rotacionando formatos (imagem ↔ vídeo curto) e criativos focados em 'Dor + Benefício' para evitar fadiga.", 
       iconType: "zap" 
     }
   ],
   regions: [
-    { name: "Maricá", volume: "Maior volume", cpl: "Google: ~R$ 13,30 | Meta: ~R$ 12,50", status: "Escala vertical (+20% de orçamento)", type: "success" },
-    { name: "Saquarema e Unamar", volume: "Bom volume (Google e Meta)", cpl: "Google: ~R$ 15,70 | Meta: ~R$ 14,50", status: "Escala vertical (Candidato forte pelo alto volume de conversão)", type: "success" },
-    { name: "MG (Benfica)", volume: "Médio volume", cpl: "Google: ~R$ 11,87 | Meta: ~R$ 10,90", status: "Escala média controlada (Garantir estabilidade e CPL baixo)", type: "warning" }
+    { name: "Maricá", volume: "Maior volume de leads", cpl: "Google: ~R$ 13,30 | Meta: ~R$ 12,50", status: "Orçamento: de R$ 628 para R$ 754 (+20%)", type: "success" },
+    { name: "Saquarema e Unamar", volume: "Bom volume de leads", cpl: "Google: ~R$ 15,70 | Meta: ~R$ 14,50", status: "Orçamento: de R$ 612 para R$ 734 (+20%)", type: "success" },
+    { name: "MG (Benfica)", volume: "Médio volume", cpl: "Google: ~R$ 11,87 | Meta: ~R$ 10,90", status: "Orçamento: Mantido em R$ 400 (Estabilidade)", type: "warning" }
   ],
   strategies: [
-    { title: "Foco em Search com Intenção", description: "Ao fazer expansão vertical, aumente o orçamento nas campanhas onde as conversões em WhatsApp já acontecem em volume: Maricá (Google Ads e Meta Ads) e Saquarema/Unamar (Google Ads).", type: "action" },
-    { title: "Rebalanceamento de Verba", description: "Regiões com CPL alto consumindo desproporcionalmente o spend, como Vila Velha e Muqui & Mimoso (Google Ads e Meta Ads), terão a verba reduzida e rebalanceada para acelerar Maricá (Google Ads e Meta Ads).", type: "action" }
+    { title: "Plano de Ação: Gestão de Search", description: "Focaremos nosso esforço diário de otimização no Google Ads para Maricá e Saquarema/Unamar, onde já possuímos maturidade de conversão para WhatsApp.", type: "action" },
+    { title: "Plano de Ação: Rebalanceamento de Verba", description: "Cortaremos parte da verba do funil padrão de Vila Velha e Muqui & Mimoso, deixando nestas apenas o orçamento isolado para teste da oferta de 700 Mega. O excedente irá para Maricá e Saquarema.", type: "action" }
   ]
 };
 
@@ -67,31 +67,31 @@ export const horizontalData: ViewContentData = {
   cards: [
     { 
       title: "Foco Principal", 
-      value: "Adjacências", 
-      detail: "Planejar adjacências a partir de Maricá. Público nos arredores permite ampliar alcance com menor risco.", 
+      value: "Expansão em Benfica", 
+      detail: "Aproveitar os 90km de rede recém-cabeada (Juiz de Fora). Aplicar a verba emergencial aprovada de R$ 1.000 com o gatilho 'Chegamos na sua região'.", 
       iconType: "map" 
     },
     { 
-      title: "Contenção", 
-      value: "Pausar Expansão", 
-      detail: "Conter expansão em Vila Velha e Muqui & Mimoso até ajustar oferta/CTA para evitar diluição.", 
+      title: "Pivotagem Tática (Com Prazo)", 
+      value: "Oferta 700 Mega até 31/07", 
+      detail: "Rodar o plano de 700 Mega por R$ 99,99 em Mimoso e Vila Velha apenas até 31 de Julho (alinhado com comercial) para proteger o LTV/CAC. Após isso, pausaremos para análise.", 
       iconType: "target" 
     },
     { 
       title: "Alerta Crítico", 
       value: "Zero Conversões", 
-      detail: "Se zerar conversas por 3+ dias em nova adjacência: diagnosticar oferta, replicar de Maricá e ajustar raio.", 
+      detail: "Se zerar conversas por 3+ dias em nova adjacência, nossa equipe pausará a campanha no mesmo dia e diagnosticará a oferta.", 
       iconType: "alert-circle" 
     }
   ],
   regions: [
-    { name: "Piuma e Anchieta", volume: "Alcance: ~120k pessoas", cpl: "Google CPC: R$ 2,41 | Meta CPC: R$ 1,90", status: "Escalar para expandir público", type: "success" },
-    { name: "Vila Velha", volume: "Alcance: ~250k pessoas", cpl: "Google CPC: R$ 3,15 | Meta CPC: R$ 2,50", status: "Escalar para expandir público", type: "success" },
-    { name: "Muqui & Mimoso", volume: "Alcance: ~80k pessoas", cpl: "Google CPC: R$ 2,80 | Meta CPC: R$ 2,10", status: "Escalar para expandir público", type: "success" }
+    { name: "Benfica (Juiz de Fora)", volume: "90km de rede recém-cabeada", cpl: "Oportunidade de Mercado", status: "Orçamento Especial: R$ 1.000 (Emergencial)", type: "success" },
+    { name: "Vila Velha", volume: "Baixa tração atual", cpl: "Foco em reverter CAC", status: "Pivotagem: Oferta 700 Mega", type: "warning" },
+    { name: "Muqui & Mimoso", volume: "Baixa tração atual", cpl: "Foco em reverter CAC", status: "Pivotagem: Oferta 700 Mega", type: "warning" }
   ],
   strategies: [
-    { title: "Expansão Horizontal Inteligente", description: "Priorizar até três regiões com melhor equilíbrio entre CTR e volume de alcance (Piuma e Anchieta, Vila Velha e Muqui & Mimoso) para trabalhar um bom volume de expansão de público.", type: "action" },
-    { title: "Expansão de Raio Gradual", description: "Realizar expansão de raio gradual de alguns quilômetros a partir dos locais que já atuamos nessas regiões prioritárias que apresentam bom equilíbrio entre CTR e volume.", type: "action" },
-    { title: "Atenção para o YouTube", description: "Apesar de não gerar conversões diretas, o foco da campanha de YouTube é gerar alcance e reconhecimento de marca, aquecendo o público indiretamente para a expansão em novas regiões.", type: "action" }
+    { title: "Plano de Ação: Prioridade Benfica", description: "Expansão máxima na nova infraestrutura de Benfica. Focaremos o orçamento adicional aprovado para gerar demanda imediata no novo cabeamento.", type: "action" },
+    { title: "Plano de Ação: Oferta Limitada e Avaliação", description: "Vila Velha e Muqui/Mimoso rodarão estritamente a campanha de 700 Mega (R$ 99,99) até 31 de Julho. Em agosto, pausaremos para analisar a qualidade das instalações, resposta do público, e definir os próximos passos da expansão horizontal.", type: "action" },
+    { title: "Plano de Ação: Topo de Funil (YouTube)", description: "Manteremos a campanha de YouTube com orçamento mínimo de manutenção (R$ 150) focada apenas em gerar alcance e reconhecimento de marca (branding) nas novas praças.", type: "action" }
   ]
 };
